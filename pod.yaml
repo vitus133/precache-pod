@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: test
+  name: test
+  namespace: default
+spec:
+  containers:
+  - image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4bb288f4fd2c36ef58b9591ce4d3198d82596a5fb35e782f6418c98bd852405a
+    imagePullPolicy: IfNotPresent
+    name: test-1
+    resources: {}
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: cnfdf12
+  restartPolicy: Never
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  
