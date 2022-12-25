@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: test
+  name: test
+  namespace: default
+spec:
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: cnfdf12
+  restartPolicy: Never
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  
